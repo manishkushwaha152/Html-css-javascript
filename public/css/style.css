@@ -1,0 +1,43 @@
+/* public/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 300px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px; /* 👈 Add this line */
+}
+
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    nav {
+      background-color: #007bff;
+      padding: 10px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav h1 {
+      margin: 0;
+    }
+    nav button {
+      background-color: white;
+      color: #007bff;
+      border: none;
+      padding: 6px 12px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <h1>MyApp</h1>
+    <button onclick="logout()">Logout</button>
+  </nav>
+
+  <main style="text-align:center; margin-top: 50px;">
+    <h2>Welcome to the Home Page</h2>
+    <p>You have successfully logged in!</p>
+  </main>
+
+  <script>
+    // Automatically redirect to login if no token is found
+    if (!localStorage.getItem("token")) {
+      window.location.href = "/login";
+    }
+
+    function logout() {
+      localStorage.removeItem("token");
+      window.location.href = "/login";
+    }
+  </script>
+</body>
+</html>
